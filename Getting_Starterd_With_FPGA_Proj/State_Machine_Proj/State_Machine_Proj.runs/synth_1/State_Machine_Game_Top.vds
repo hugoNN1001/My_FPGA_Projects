@@ -1,0 +1,291 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Dec 22 10:00:56 2025
+# Process ID         : 26644
+# Current directory  : C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.runs/synth_1
+# Command line       : vivado.exe -log State_Machine_Game_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source State_Machine_Game_Top.tcl
+# Log file           : C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.runs/synth_1/State_Machine_Game_Top.vds
+# Journal file       : C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-ATBSBNLO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16859 MB
+# Swap memory        : 14495 MB
+# Total Virtual      : 31354 MB
+# Available Virtual  : 12007 MB
+#-----------------------------------------------------------
+source State_Machine_Game_Top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/utils_1/imports/synth_1/State_Machine_Game_Top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/utils_1/imports/synth_1/State_Machine_Game_Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top State_Machine_Game_Top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24416
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 955.301 ; gain = 468.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'State_Machine_Game_Top' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/State_Machine_Game_Top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Debounce_Filter' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Debounce_Filter.v:24]
+	Parameter DEBOUNCE_LIMIT bound to: 1000000 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Debounce_Filter.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'Debounce_Filter' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Debounce_Filter.v:24]
+INFO: [Synth 8-6157] synthesizing module 'State_Machine_Game' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/State_Machine_Game.v:1]
+	Parameter COUNT_LIMIT bound to: 25000000 - type: integer 
+	Parameter GAME_LIMIT bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Count_And_Toggle' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Count_And_Toggle.v:23]
+	Parameter COUNT_LIMIT bound to: 25000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Count_And_Toggle' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Count_And_Toggle.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/LFSR.v:22]
+	Parameter NUM_BITS bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/LFSR.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'State_Machine_Game' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/State_Machine_Game.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Binary_To_7Segment' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Binary_To_7Segment.v:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Binary_To_7Segment.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'Binary_To_7Segment' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Binary_To_7Segment.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'State_Machine_Game_Top' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/State_Machine_Game_Top.v:23]
+WARNING: [Synth 8-7137] Register r_Index_reg in module State_Machine_Game has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/State_Machine_Game.v:148]
+WARNING: [Synth 8-7137] Register o_Score_reg in module State_Machine_Game has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/State_Machine_Game.v:149]
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[3] driven by constant 1
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[2] driven by constant 1
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[1] driven by constant 1
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.973 ; gain = 575.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.973 ; gain = 575.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.973 ; gain = 575.715
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1062.973 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/constrs_1/new/Master.xdc]
+Finished Parsing XDC File [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/constrs_1/new/Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.srcs/constrs_1/new/Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/State_Machine_Game_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/State_Machine_Game_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1158.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1158.359 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1158.359 ; gain = 671.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1158.359 ; gain = 671.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1158.359 ; gain = 671.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_Curr_State_reg' in module 'State_Machine_Game'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   START |                              000 |                              001
+             PATTERN_OFF |                              011 |                              000
+            PATTERN_SHOW |                              110 |                              010
+             WAIT_PLAYER |                              100 |                              011
+              INCR_SCORE |                              001 |                              100
+                  WINNER |                              010 |                              110
+                   LOSER |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_Curr_State_reg' using encoding 'sequential' in module 'State_Machine_Game'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1158.359 ; gain = 671.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               18 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 2     
+	   7 Input    4 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 8     
+	   7 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[3] driven by constant 1
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[2] driven by constant 1
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[1] driven by constant 1
+WARNING: [Synth 8-3917] design State_Machine_Game_Top has port o_AN[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1158.359 ; gain = 671.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1258.656 ; gain = 771.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1297.590 ; gain = 810.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1297.609 ; gain = 810.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |     6|
+|4     |LUT2   |     6|
+|5     |LUT3   |     3|
+|6     |LUT4   |    38|
+|7     |LUT5   |    24|
+|8     |LUT6   |    26|
+|9     |FDCE   |     3|
+|10    |FDRE   |   193|
+|11    |FDSE   |     7|
+|12    |IBUF   |     6|
+|13    |OBUF   |    15|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1489.051 ; gain = 906.406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1489.051 ; gain = 1001.793
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1489.051 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1489.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1de9e87c
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1489.051 ; gain = 1192.320
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1489.051 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/State_Machine_Proj/State_Machine_Proj.runs/synth_1/State_Machine_Game_Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file State_Machine_Game_Top_utilization_synth.rpt -pb State_Machine_Game_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 22 10:01:51 2025...

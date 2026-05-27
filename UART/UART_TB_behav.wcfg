@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="UART_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="UART_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="2,386.150001 us"></ZoomEndTime>
+      <Cursor1Time time="1,236.124098 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="245"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/UART_TB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/tx_byte" type="array">
+      <obj_property name="ElementShortName">tx_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/tx_dv" type="logic">
+      <obj_property name="ElementShortName">tx_dv</obj_property>
+      <obj_property name="ObjectShortName">tx_dv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/tx_active" type="logic">
+      <obj_property name="ElementShortName">tx_active</obj_property>
+      <obj_property name="ObjectShortName">tx_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/tx_done" type="logic">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/tx_serial" type="logic">
+      <obj_property name="ElementShortName">tx_serial</obj_property>
+      <obj_property name="ObjectShortName">tx_serial</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/rx_dv" type="logic">
+      <obj_property name="ElementShortName">rx_dv</obj_property>
+      <obj_property name="ObjectShortName">rx_dv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/rx_byte" type="array">
+      <obj_property name="ElementShortName">rx_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_byte[7:0]</obj_property>
+   </wvobject>
+</wave_config>

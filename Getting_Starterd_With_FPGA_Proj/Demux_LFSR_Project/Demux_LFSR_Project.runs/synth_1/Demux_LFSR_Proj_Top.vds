@@ -1,0 +1,249 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Dec 17 08:48:06 2025
+# Process ID         : 25108
+# Current directory  : C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.runs/synth_1
+# Command line       : vivado.exe -log Demux_LFSR_Proj_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Demux_LFSR_Proj_Top.tcl
+# Log file           : C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.runs/synth_1/Demux_LFSR_Proj_Top.vds
+# Journal file       : C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-ATBSBNLO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16859 MB
+# Swap memory        : 14495 MB
+# Total Virtual      : 31354 MB
+# Available Virtual  : 14798 MB
+#-----------------------------------------------------------
+source Demux_LFSR_Proj_Top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/utils_1/imports/synth_1/Demux_LFSR_Proj_Top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/utils_1/imports/synth_1/Demux_LFSR_Proj_Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Demux_LFSR_Proj_Top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10256
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 956.875 ; gain = 467.789
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Demux_LFSR_Proj_Top' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Demux_LFSR_Proj_Top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Debounce_Filter' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Debounce_Filter.v:24]
+	Parameter DEBOUNCE_LIMIT bound to: 1000000 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Debounce_Filter.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'Debounce_Filter' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Debounce_Filter.v:24]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/LFSR.v:22]
+	Parameter NUM_BITS bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/LFSR.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Demux_1_To_4' [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Demux_1_To_4.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Demux_1_To_4' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Demux_1_To_4.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Demux_LFSR_Proj_Top' (0#1) [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/sources_1/new/Demux_LFSR_Proj_Top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.594 ; gain = 573.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.594 ; gain = 573.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.594 ; gain = 573.508
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1062.594 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/constrs_1/new/Master.xdc]
+Finished Parsing XDC File [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/constrs_1/new/Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.srcs/constrs_1/new/Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Demux_LFSR_Proj_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Demux_LFSR_Proj_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1155.867 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1155.867 ; gain = 666.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1155.867 ; gain = 666.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1155.867 ; gain = 666.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1155.867 ; gain = 666.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1155.867 ; gain = 666.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1246.910 ; gain = 757.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1276.848 ; gain = 787.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1277.391 ; gain = 788.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |     2|
+|4     |LUT2   |     3|
+|5     |LUT3   |     8|
+|6     |LUT4   |    11|
+|7     |LUT5   |     3|
+|8     |LUT6   |     6|
+|9     |FDRE   |    59|
+|10    |FDSE   |    11|
+|11    |IBUF   |     5|
+|12    |OBUF   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1473.738 ; gain = 891.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1473.738 ; gain = 984.652
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1473.738 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1473.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 89985a0c
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1473.738 ; gain = 1176.270
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1473.738 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ASUS/OneDrive - UNSW/FPGA_proj/Demux_LFSR_Project/Demux_LFSR_Project.runs/synth_1/Demux_LFSR_Proj_Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Demux_LFSR_Proj_Top_utilization_synth.rpt -pb Demux_LFSR_Proj_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 17 08:49:00 2025...

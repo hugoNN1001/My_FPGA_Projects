@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1767145163">
+  <File Type="REPORTS-TCL" Name="BCD_Incrementer_Tester_reports.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="BCD_Incrementer_Tester_power_summary_routed.pb"/>
+  <File Type="BITSTR-MMI" Name="BCD_Incrementer_Tester.mmi"/>
+  <File Type="OPT-DRC" Name="BCD_Incrementer_Tester_drc_opted.rpt"/>
+  <File Type="BG-DRC" Name="BCD_Incrementer_Tester.drc"/>
+  <File Type="ROUTE-STATUS-PB" Name="BCD_Incrementer_Tester_route_status.pb"/>
+  <File Type="BG-BGN" Name="BCD_Incrementer_Tester.bgn"/>
+  <File Type="PLACE-UTIL" Name="BCD_Incrementer_Tester_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="BCD_Incrementer_Tester_utilization_placed.pb"/>
+  <File Type="PLACE-IO" Name="BCD_Incrementer_Tester_io_placed.rpt"/>
+  <File Type="BG-BIN" Name="BCD_Incrementer_Tester.bin"/>
+  <File Type="PLACE-CTRL" Name="BCD_Incrementer_Tester_control_sets_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="BCD_Incrementer_Tester_power_routed.rpx"/>
+  <File Type="ROUTE-DCP" Name="BCD_Incrementer_Tester_routed.dcp"/>
+  <File Type="BITSTR-MSK" Name="BCD_Incrementer_Tester.msk"/>
+  <File Type="BITSTR-RBT" Name="BCD_Incrementer_Tester.rbt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="BCD_Incrementer_Tester_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="BCD_Incrementer_Tester_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="BCD_Incrementer_Tester_route_status.rpt"/>
+  <File Type="PA-TCL" Name="BCD_Incrementer_Tester.tcl"/>
+  <File Type="ROUTE-PWR" Name="BCD_Incrementer_Tester_power_routed.rpt"/>
+  <File Type="ROUTE-DRC" Name="BCD_Incrementer_Tester_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="BCD_Incrementer_Tester_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="BCD_Incrementer_Tester_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="BCD_Incrementer_Tester.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="BCD_Incrementer_Tester_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="BCD_Incrementer_Tester_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="BCD_Incrementer_Tester.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="BCD_Incrementer_Tester_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="BCD_Incrementer_Tester_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="BCD_Incrementer_Tester.vdi"/>
+  <File Type="ROUTE-CLK" Name="BCD_Incrementer_Tester_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="BCD_Incrementer_Tester_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="BCD_Incrementer_Tester_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="BCD_Incrementer_Tester_bus_skew_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="BCD_Incrementer_Tester_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="BCD_Incrementer_Tester_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="BCD_Incrementer_Tester_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="BCD_Incrementer_Tester_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="BCD_Incrementer_Tester_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="BCD_Incrementer_Tester.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="BCD_Incrementer_Tester_bus_skew_postroute_physopted.pb"/>
+  <File Type="BITSTR-NKY" Name="BCD_Incrementer_Tester.nky"/>
+  <File Type="BITSTR-BMM" Name="BCD_Incrementer_Tester_bd.bmm"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="BCD_Incrementer_Tester.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="BCD_Incrementer_Tester_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="BCD_Incrementer_Tester_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="BCD_Incrementer_Tester_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="BCD_Incrementer_Tester_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="BCD_Incrementer_Tester_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="BCD_Incrementer_Tester_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="BCD_Incrementer_Tester_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="BCD_Incrementer_Tester_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="BCD_Incrementer_Tester_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="BCD_Incrementer_Tester_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="BCD_Incrementer_Tester_postroute_physopt_bb.dcp"/>
+  <File Type="PDI-FILE" Name="BCD_Incrementer_Tester.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="BCD_Incrementer_Tester_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="BCD_Incrementer_Tester_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="BCD_Incrementer_Tester.rcfi"/>
+  <File Type="CFI_FILE" Name="BCD_Incrementer_Tester.cfi"/>
+  <File Type="RNPI_FILE" Name="BCD_Incrementer_Tester.rnpi"/>
+  <File Type="NPI_FILE" Name="BCD_Incrementer_Tester.npi"/>
+  <File Type="RBD_FILE" Name="BCD_Incrementer_Tester.rbd"/>
+  <File Type="ROUTE-RQS" Name="BCD_Incrementer_Tester_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="BCD_Incrementer_Tester_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/BCD_Digit_Incrementor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_Incrementor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Getting_Starterd_With_FPGA_Proj/State_Machine_Proj/State_Machine_Proj.srcs/sources_1/new/Binary_To_7Segment.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Getting_Starterd_With_FPGA_Proj/Debounce_Project/Debounce_Project.srcs/sources_1/new/Debounce_Filter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Display_Mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_Incrementer_Tester.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Dual_Priority_Decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Priority_Encoder_16.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Dual_Priority_Encoder_Tester.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Barrel_Shifter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Barrel_Shifter_L.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Multifunctional_Barrel_Shifter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Barrel_Shifter_Tester.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Sign_Magnitude_Adder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Simplified_Floating_Point_Adder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Decoder_2_To_4.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Decoder/project_1.srcs/sources_1/new/Decoder_4_to_16.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="BCD_Incrementer_Tester"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Barrel_Shifter_Tester.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>

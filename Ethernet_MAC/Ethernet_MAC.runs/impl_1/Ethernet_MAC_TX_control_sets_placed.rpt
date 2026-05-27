@@ -1,0 +1,155 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue May 26 13:14:35 2026
+| Host         : LAPTOP-ATBSBNLO running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Ethernet_MAC_TX_control_sets_placed.rpt
+| Design       : Ethernet_MAC_TX
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    77 |
+|    Minimum number of control sets                        |    77 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   492 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    77 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |    65 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              44 |           17 |
+| No           | No                    | Yes                    |              11 |            5 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             621 |          200 |
+| Yes          | No                    | Yes                    |              47 |           19 |
+| Yes          | Yes                   | No                     |               1 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+----------------------------------------------------------------+--------------------------+------------------+----------------+--------------+
+|                Clock Signal                |                          Enable Signal                         |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------+----------------------------------------------------------------+--------------------------+------------------+----------------+--------------+
+|  i_mii_tx_clk_IBUF_BUFG                    | Async_FIFO_Inst/Wr_Synchronizer_isnt/r_rd_ptr_bin13_out        | CRC32_Inst/i_rst_n       |                1 |              1 |         1.00 |
+|  i_mii_tx_clk_IBUF_BUFG                    | r_gap_counter[6]_i_1_n_0                                       | r_gap_counter[5]_i_1_n_0 |                1 |              1 |         1.00 |
+|  i_mii_tx_clk_IBUF_BUFG                    | r_preamble_counter[3]_i_1_n_0                                  |                          |                1 |              4 |         4.00 |
+|  i_mii_tx_clk_IBUF_BUFG                    | r_gap_counter[6]_i_1_n_0                                       |                          |                1 |              4 |         4.00 |
+|  Async_FIFO_Inst/Wr_Synchronizer_isnt/E[0] |                                                                |                          |                3 |              6 |         2.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tvalid[0]          | CRC32_Inst/i_rst_n       |                3 |              7 |         2.33 |
+|  i_mii_tx_clk_IBUF_BUFG                    | Async_FIFO_Inst/Wr_Synchronizer_isnt/r_fifo_rd_en_reg[0]       | CRC32_Inst/i_rst_n       |                2 |              7 |         3.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_14[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_16[0] |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_3[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_6[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_2[0]  |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_10[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_7[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_8[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_1[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_15[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_9[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0]_2[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3][0]    |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0]_1[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[1][0]    |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_13[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_0[0]  |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_5[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_12[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_4[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_13[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_15[0] |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0][0]    |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_16[0] |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_11[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0]_0[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0]_4[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_1[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2][0]    |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_10[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_0[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_14[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_2[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_3[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_4[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_5[0]  |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_2[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5][0]    |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_4[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_3[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[4]_2[0]  |                          |                7 |              9 |         1.29 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_1[0]  |                          |                9 |              9 |         1.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_9[0]  |                          |                5 |              9 |         1.80 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_7[0]  |                          |                9 |              9 |         1.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_10[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_6[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_9[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_0[0]  |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_12[0] |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_8[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[4][0]    |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[4]_3[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[4]_0[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/E[0]                      |                          |                9 |              9 |         1.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_5[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_6[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_8[0]  |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[3]_7[0]  |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[5]_11[0] |                          |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[4]_1[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0]_3[0]  |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[0]_5[0]  |                          |                2 |              9 |         4.50 |
+|  i_mii_tx_clk_IBUF_BUFG                    | Async_FIFO_Inst/Wr_Synchronizer_isnt/r_fifo_rd_en_reg_0[0]     |                          |                3 |              9 |         3.00 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_11[0] |                          |                2 |              9 |         4.50 |
+|  i_clk_IBUF_BUFG                           | Async_FIFO_Inst/Rd_Synchronizer_isnt/r_wr_ptr_bin_reg[2]_12[0] |                          |                2 |              9 |         4.50 |
+|  i_mii_tx_clk_IBUF_BUFG                    |                                                                | CRC32_Inst/i_rst_n       |                5 |             11 |         2.20 |
+|  i_clk_IBUF_BUFG                           |                                                                |                          |                5 |             14 |         2.80 |
+|  i_mii_tx_clk_IBUF_BUFG                    |                                                                |                          |                9 |             24 |         2.67 |
+|  i_mii_tx_clk_IBUF_BUFG                    | r_crc32_shift_reg                                              |                          |                7 |             28 |         4.00 |
+|  i_mii_tx_clk_IBUF_BUFG                    | CRC32_Inst/r_crc[31]_i_1_n_0                                   | CRC32_Inst/i_rst_n       |               13 |             32 |         2.46 |
++--------------------------------------------+----------------------------------------------------------------+--------------------------+------------------+----------------+--------------+
+
+

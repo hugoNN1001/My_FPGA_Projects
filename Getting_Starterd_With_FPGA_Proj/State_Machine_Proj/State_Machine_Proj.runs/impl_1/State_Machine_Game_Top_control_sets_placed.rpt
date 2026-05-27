@@ -1,0 +1,89 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Dec 22 10:02:36 2025
+| Host         : LAPTOP-ATBSBNLO running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file State_Machine_Game_Top_control_sets_placed.rpt
+| Design       : State_Machine_Game_Top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    53 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    11 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              42 |           18 |
+| No           | No                    | Yes                    |               3 |            1 |
+| No           | Yes                   | No                     |             132 |           34 |
+| Yes          | No                    | No                     |              22 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               4 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal   |                                   Enable Signal                                  |                                 Set/Reset Signal                                 | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  i_Clk_IBUF_BUFG | State_Machine_Game_Inst/o_Score[3]_i_1_n_0                                       |                                                                                  |                1 |              4 |         4.00 |
+|  i_Clk_IBUF_BUFG | State_Machine_Game_Inst/Count_And_Toggle_Inst/FSM_sequential_r_Curr_State_reg[2] | State_Machine_Game_Inst/Count_And_Toggle_Inst/FSM_sequential_r_Curr_State_reg[1] |                2 |              4 |         2.00 |
+|  i_Clk_IBUF_BUFG |                                                                                  | Debounce_Rst_Inst/w_Debounced_Rst                                                |                3 |             10 |         3.33 |
+|  i_Clk_IBUF_BUFG | State_Machine_Game_Inst/r_Pattern                                                |                                                                                  |                4 |             18 |         4.50 |
+|  i_Clk_IBUF_BUFG |                                                                                  | Debounce_Rst_Inst/p_0_in                                                         |                5 |             20 |         4.00 |
+|  i_Clk_IBUF_BUFG |                                                                                  | Debounce_S1_Inst/p_0_in                                                          |                5 |             20 |         4.00 |
+|  i_Clk_IBUF_BUFG |                                                                                  | Debounce_S2_Inst/p_0_in                                                          |                5 |             20 |         4.00 |
+|  i_Clk_IBUF_BUFG |                                                                                  | Debounce_S3_Inst/p_0_in                                                          |                5 |             20 |         4.00 |
+|  i_Clk_IBUF_BUFG |                                                                                  | Debounce_S4_Inst/p_0_in                                                          |                5 |             20 |         4.00 |
+|  i_Clk_IBUF_BUFG |                                                                                  | State_Machine_Game_Inst/Count_And_Toggle_Inst/r_Count[0]_i_1__4_n_0              |                7 |             25 |         3.57 |
+|  i_Clk_IBUF_BUFG |                                                                                  |                                                                                  |               18 |             42 |         2.33 |
++------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

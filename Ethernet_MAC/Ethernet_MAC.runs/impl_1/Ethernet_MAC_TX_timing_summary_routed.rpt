@@ -1,0 +1,677 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue May 26 13:15:25 2026
+| Host         : LAPTOP-ATBSBNLO running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file Ethernet_MAC_TX_timing_summary_routed.rpt -pb Ethernet_MAC_TX_timing_summary_routed.pb -rpx Ethernet_MAC_TX_timing_summary_routed.rpx -warn_on_violation
+| Design       : Ethernet_MAC_TX
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                     Violations  
+---------  ----------------  ------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell     718         
+TIMING-20  Warning           Non-clocked latch               6           
+LATCH-1    Advisory          Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (838)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (1451)
+5. checking no_input_delay (11)
+6. checking no_output_delay (7)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (838)
+--------------------------
+ There are 597 register/latch pins with no clock driven by root clock pin: i_clk (HIGH)
+
+ There are 121 register/latch pins with no clock driven by root clock pin: i_mii_tx_clk (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[0]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[1]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[2]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[3]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[4]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[5]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[6]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[0]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[1]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[2]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[3]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[4]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[5]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: Async_FIFO_Inst/r_rd_ptr_bin_reg[6]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[3]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[4]/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[5]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (1451)
+---------------------------------------------------
+ There are 1451 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (11)
+-------------------------------
+ There are 11 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (7)
+-------------------------------
+ There are 7 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                 1458          inf        0.000                      0                 1458           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay          1458 Endpoints
+Min Delay          1458 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            s_axis_tready
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.337ns  (logic 3.368ns (45.906%)  route 3.969ns (54.094%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           0.863     2.552    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X1Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.676 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_2/O
+                         net (fo=2, routed)           2.059     4.735    s_axis_tready_OBUF
+    V19                  OBUF (Prop_obuf_I_O)         2.602     7.337 r  s_axis_tready_OBUF_inst/O
+                         net (fo=0)                   0.000     7.337    s_axis_tready
+    V19                                                               r  s_axis_tready (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[31][1]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.726ns  (logic 0.890ns (13.231%)  route 5.836ns (86.769%))
+  Logic Levels:           4  (FDCE=1 LUT4=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.501     5.343    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X8Y7           LUT4 (Prop_lut4_I0_O)        0.124     5.467 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[31][8]_i_1/O
+                         net (fo=9, routed)           1.260     6.726    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_32
+    SLICE_X13Y10         FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[31][1]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[31][2]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.668ns  (logic 0.890ns (13.348%)  route 5.778ns (86.652%))
+  Logic Levels:           4  (FDCE=1 LUT4=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.501     5.343    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X8Y7           LUT4 (Prop_lut4_I0_O)        0.124     5.467 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[31][8]_i_1/O
+                         net (fo=9, routed)           1.201     6.668    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_32
+    SLICE_X9Y6           FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[31][2]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][0]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][0]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][1]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][1]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][2]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][2]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][3]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][3]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][4]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][4]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][5]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][5]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/fifo_mem_reg[32][7]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.655ns  (logic 0.890ns (13.374%)  route 5.765ns (86.626%))
+  Logic Levels:           4  (FDCE=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/C
+    SLICE_X6Y6           FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Async_FIFO_Inst/r_wr_ptr_bin_reg[3]/Q
+                         net (fo=64, routed)          1.047     1.565    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_0[3]
+    SLICE_X1Y7           LUT5 (Prop_lut5_I1_O)        0.124     1.689 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4/O
+                         net (fo=2, routed)           1.029     2.718    Async_FIFO_Inst/Rd_Synchronizer_isnt/s_axis_tready_OBUF_inst_i_4_n_0
+    SLICE_X3Y8           LUT6 (Prop_lut6_I4_O)        0.124     2.842 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3/O
+                         net (fo=64, routed)          2.831     5.673    Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[0][8]_i_3_n_0
+    SLICE_X6Y10          LUT6 (Prop_lut6_I4_O)        0.124     5.797 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/fifo_mem[32][8]_i_1/O
+                         net (fo=9, routed)           0.858     6.655    Async_FIFO_Inst/Rd_Synchronizer_isnt_n_31
+    SLICE_X8Y13          FDRE                                         r  Async_FIFO_Inst/fifo_mem_reg[32][7]/CE
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y8           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[0]/C
+    SLICE_X3Y8           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[0]/Q
+                         net (fo=1, routed)           0.056     0.197    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[0]
+    SLICE_X3Y8           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y7           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[4]/C
+    SLICE_X1Y7           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[4]/Q
+                         net (fo=1, routed)           0.056     0.197    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[4]
+    SLICE_X1Y7           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[6]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y7           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[6]/C
+    SLICE_X1Y7           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[6]/Q
+                         net (fo=1, routed)           0.056     0.197    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[6]
+    SLICE_X1Y7           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y7           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1_reg[0]/C
+    SLICE_X3Y7           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1_reg[0]/Q
+                         net (fo=1, routed)           0.056     0.197    Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1[0]
+    SLICE_X3Y7           FDCE                                         r  Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y6           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1_reg[3]/C
+    SLICE_X3Y6           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1_reg[3]/Q
+                         net (fo=1, routed)           0.056     0.197    Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff1[3]
+    SLICE_X3Y6           FDCE                                         r  Async_FIFO_Inst/Wr_Synchronizer_isnt/r_ff2_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.199ns  (logic 0.141ns (70.953%)  route 0.058ns (29.047%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y9           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[2]/C
+    SLICE_X0Y9           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[2]/Q
+                         net (fo=1, routed)           0.058     0.199    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[2]
+    SLICE_X0Y9           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.206ns  (logic 0.141ns (68.336%)  route 0.065ns (31.664%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y9           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[1]/C
+    SLICE_X0Y9           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[1]/Q
+                         net (fo=1, routed)           0.065     0.206    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[1]
+    SLICE_X0Y9           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.206ns  (logic 0.141ns (68.336%)  route 0.065ns (31.664%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y7           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[5]/C
+    SLICE_X0Y7           FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[5]/Q
+                         net (fo=1, routed)           0.065     0.206    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[5]
+    SLICE_X0Y7           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.220ns  (logic 0.164ns (74.580%)  route 0.056ns (25.420%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y8           FDCE                         0.000     0.000 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[3]/C
+    SLICE_X2Y8           FDCE (Prop_fdce_C_Q)         0.164     0.164 r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1_reg[3]/Q
+                         net (fo=1, routed)           0.056     0.220    Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff1[3]
+    SLICE_X2Y8           FDCE                                         r  Async_FIFO_Inst/Rd_Synchronizer_isnt/r_ff2_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRC32_Inst/r_crc_reg[16]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            CRC32_Inst/r_crc_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.250ns  (logic 0.186ns (74.329%)  route 0.064ns (25.671%))
+  Logic Levels:           2  (FDPE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y11          FDPE                         0.000     0.000 r  CRC32_Inst/r_crc_reg[16]/C
+    SLICE_X7Y11          FDPE (Prop_fdpe_C_Q)         0.141     0.141 r  CRC32_Inst/r_crc_reg[16]/Q
+                         net (fo=2, routed)           0.064     0.205    CRC32_Inst/p_35_in
+    SLICE_X6Y11          LUT6 (Prop_lut6_I4_O)        0.045     0.250 r  CRC32_Inst/r_crc[8]_i_1/O
+                         net (fo=1, routed)           0.000     0.250    CRC32_Inst/p_1_in__0[8]
+    SLICE_X6Y11          FDPE                                         r  CRC32_Inst/r_crc_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
