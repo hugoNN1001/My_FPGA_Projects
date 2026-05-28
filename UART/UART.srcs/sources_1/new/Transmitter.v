@@ -27,7 +27,7 @@ module Transmitter(
   input i_tx_dv,
   // baud rate clock (9600) from Baud_Rate_Genrator, not the system block (10MHz)
   input i_tx_clk,
-  input i_tx_rst,
+  input i_tx_rst_n,
   input [7:0] i_tx_byte,
   // o_tx_out is the current bit that is transmitted on the line
   output reg o_tx_serial,
@@ -46,8 +46,8 @@ module Transmitter(
   reg [2:0] r_tx_bit_index;
   
   // State transisition
-  always @(posedge i_clk) begin
-    if (i_tx_rst) begin 
+  always @(posedge i_clk or negedge i_tx_rst_n) begin
+    if (i_tx_rst_n) begin 
       r_tx_state <= IDLE;   
     end
     else begin
