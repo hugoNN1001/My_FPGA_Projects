@@ -51,7 +51,7 @@ module UART_RX(
   // This is the bit voted
   reg r_voted_bit;
   
-  // Double-flopping incoming data so it can be usedin UART RX clock domain
+  // Double-flopping incoming data so it can be used in UART RX clock domain
   always @(posedge i_clk) begin
     r_rx_serial_ff1 <= i_rx_serial;
     r_rx_serial_ff2 <= r_rx_serial_ff1;

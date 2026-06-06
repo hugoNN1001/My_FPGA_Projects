@@ -5,7 +5,7 @@
 // 
 // Create Date: 05/12/2026 03:15:31 PM
 // Design Name: 
-// Module Name: Transmitter
+// Module Name: UART_TX
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
