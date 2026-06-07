@@ -52,8 +52,8 @@ module Clock_480p(
       // MMCM Ports (Table 3-5 User Guide - UG472)
       .CLKIN1(i_sysclk),          // General clock input
       .RST(i_rst),                // Reset
-      .CLKOUT0(clk_pix_unbuf),        // Output clock - o_clk_pix
-      .LOCKED(locked_unsynced),  // pixel clock locked?
+      .CLKOUT0(clk_pix_unbuf),    // Output clock - o_clk_pix
+      .LOCKED(locked_unsynced),   // pixel clock locked?
       .CLKFBOUT(feedback),        // internal feedback
       .CLKFBIN(feedback)          // internal feedback
     );

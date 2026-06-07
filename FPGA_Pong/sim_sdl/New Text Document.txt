@@ -1,0 +1,152 @@
+#include <stdio.d.h>
+#include <SDL.h>
+#include <verilated.h>
+#include "VFlag_Norway.h"
+
+// screen dimensions
+const int H_RES = 640;
+const int V_RES = 480;
+
+// Define type Pixel for SDL texture
+typedef struct Pixel {
+    uint8_t transparency;       // transparency
+    uint8_t r;                  // red
+    uint8_t g;                  // green
+    uint8_t b;                  // blue
+} Pixel;
+
+int main(int argc, char* argv[]) {
+
+    // Pass command-line arguments directly into Verilator's runtime engine
+    Verilated::commandArgs(argc,argv);
+
+    printf("Initializing SDL Video subsystem.\n");
+
+    // Initialize SDL Video subsystem
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        // SDL_Init returns -1 if could not init video subsystem
+        printf("SDL init failed: %s\n", SDL_GetError());
+        return 1;
+    }
+
+    printf("SDL Video initialized.\n");
+
+    // Create a Pixel array. This array holds all the information of a pixel for all H_RES*V_RES pixels on screen
+    Pixel screenbuffer[H_RES * V_RES];
+
+    // Create these 3 SDL objects
+    SDL_Window* sdl_window      = NULL;
+    SDL_Renderer* sdl_renderer  = NULL;
+    SDL_Texture* sdl_texture    = NULL;
+    
+    // Create a window with the specified position, dimensions, and flags.
+    sdl_window = SDL_CreateWindow("Flag of Norway", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, H_RES, V_RES, SDL_WINDOW_FULLSCREEN);
+    if (!sdl_window) {
+        printf("Window creation failed: %s\n", SDL_GetError());
+        return 1;
+    }
+
+    // Create a 2D rendering context for the window just created above.
+    // SDL_RENDERER_ACCELERATED tells renderer must use GPU to draw pixels instead of relying on slow CPU
+    // SDL_RENDERER_PRESENTVSYNC locks execution speed of main loop to refresh rate of your monitor. Without it, main loop runs with CPU clock which is super fast 
+    // To do: try removing these flags and see its effects
+    sdl_renderer = SDL_CreateRenderer(sdl_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    if (!sdl_renderer) {
+        printf("Renderer creation failed: %s\n", SDL_GetError());
+        return 1;
+    }
+
+    // Create a texture for the rendering context.
+    // sdl_texture points to the VRAM Texture buffer inside GPU
+    sdl_texture = SDL_CreateTexture(sdl_renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, H_RES< V_RES);
+    if (!sdl_texture) {
+        printf("Texture creation failed: %s\n", SDL_GetError());
+        return 1;
+    }
+
+    // Get a snapshot of the current state of the keyboard
+    // Returns a pointer to an internal SDL array
+    // An array element with a value of 1 means the that key is pressed, 0 means unpressed
+    // NULL doesn't return the length of an array (numer of keys)
+    const Uint8_t *keyb_state = SDL_GetKeyboardState(NULL)
+
+    printf("Simulation running. Press 'Q' in simulation window to quit.\n\n");
+
+    // Initialize SV module
+    VFlag_Norway* top = new VFlag_Norway;
+
+    // reset
+    top->sim_rst = 1;
+    top->clk_pix = 0;
+    top->eval();
+    top->clk_pix = 1;
+    top->eval();
+    top->sim_rst = 0;
+    top->clk_pix = 0;
+    top->eval();
+
+    // Initialize frame rate
+    // Get the current value of the high resolution counter
+    Uint64 start_ticks = SDL_GetPerformanceCounter();
+    uint64_t frame_count = 0;
+
+    // Main loop
+    while (1) {
+        // cycle the clock
+        top->clk_pix = 0;
+        top->eval();
+        top-clk_pix = 1;
+        top->eval();
+
+        // update pixel  if not in blanking interval
+        if (top->sdl_data_en) {
+            Pixel* p = &screenbuffer[top->sdl_sy * H_RES + top->sdl_sx];
+            p->transparency = 0xFF;
+            p->r = top->sdl_r;
+            p->g = top->sdl_g;
+            p->b = top->sdl_b;
+        }
+
+        // update texture once per frame (in blanking)
+        if (top->sdl_sy < V_RES && top->sdl_sx == 0) {
+            // When sy in blanking interval and sx  is at the start of the line
+
+            // SV pixel colors were written into local C++ screenbuffer array inside RAM, GPU  can't see this 
+            // SDL_UpdateTexture copies that pixel array to VRAM Texture buffer (sdl_texture) inside GPU
+            // NULL tells SDL to update an entire screen
+            H_RES * sizeof(Pixel) = 640 * 4 bytes per Pixel = 2560 bytes : the number of bytes in a row of pixel data
+            SDL_UpdateTexture(sdl_texture, NULL, screenbuffer, H_RES * sizeof(Pixel));
+            // Clear the current rendering target
+            SDL_RendererClear(sdl_renderer);
+            // Copy the entire texture to current rendering target
+            SDL_RenderCopy(sdl_renderer, sdl_texture, NULL, NULL);
+            // To avoiding showing half-rendered screen  while calculations are happening, graphic cards maintains two buffers
+            // Front buffer: static frame currently showing on screen
+            // Back  buffer: hidden workspace where SDL_RenderCopy just finished assembling new texture
+            // SDL_RenderPresent swaps these two 
+            SDL_RenderPresent(sdl_renderer);
+
+            frame_count++;
+        }
+    }
+
+    // Calculate frame rate
+    Uint64 end_ticks = SDL_GetPerformanceCounter();
+    // SDL_GetPerformanceFrequency() returns how many times CPU counter ticks per seconds
+    // Get the duration in seconds
+    double duration = ((double)(end_ticks - start_ticks))/SDL_GetPerformanceFrequency();
+    double fps = (double)frame_count / duration;
+
+    printf("Frames per second: %.1f\n.", fps);
+
+    // Simulation finished
+    top->fianl();
+
+    SDL_DestroyTexture(sdl_texture);
+    SDL_DestroyRenderer(sdl_renderer);
+    SDL_DestroyWindow(sdl_window);
+    SDL_Quit();
+    
+    return 0;
+}
+

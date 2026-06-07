@@ -23,32 +23,32 @@
 module Flag_Ethiopia(
   input wire logic i_sysclk,
   input wire logic i_rst_n,
-  output logic vga_hsync,
+  output logic vga_hsync,   
   output logic vga_vsync,
-  output logic vga_r, vga_g, vga_b
+  output logic [3:0] vga_r, vga_g, vga_b  // 4-bit VGA red, green, blue
   );
   
   logic clk_pix, clk_pix_locked;
   
-  Clock_480p Clockk_Inst (
-    .i_sysclk,
-    .i_rst(!i_rst_n),
-    .clk_pix,
-    .clk_pix_locked
-  );
+    Clock_480p Clock_Inst (
+      .i_sysclk,
+      .i_rst(!i_rst_n),
+      .o_clk_pix(clk_pix),
+      .o_clk_pix_locked(clk_pix_locked)
+    );
   
   localparam CORW = 10;         // screen coordinate width in bits
   logic [CORW-1:0] sx, sy;
   logic hsync, vsync, data_en;
   
   Simple_480p Simple_480p_Inst (
-    .clk_pix,
+    .i_clk_pix(clk_pix),
     .i_rst_pix(!i_rst_n),
-    .sx,
-    .sy,
-    .hsync,
-    .vsync,
-    .data_en
+    .o_sx(sx),
+    .o_sy(sy),
+    .o_hsync(hsync),
+    .o_vsync(vsync),
+    .o_data_en(data_en)
   );
   
   // Define color for each region of the flag
